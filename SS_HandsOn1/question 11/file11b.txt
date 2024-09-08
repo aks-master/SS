@@ -1,0 +1,2 @@
+file question 11(B) normal FD
+file question 11(B) dup2() FD
