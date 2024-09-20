@@ -13,7 +13,7 @@ date: 20/9/24
 #include <stdio.h>
 #include <stdlib.h>
 
-void main()
+int main()
 {
     int pipefd[2];
     int childPid;
@@ -40,6 +40,7 @@ void main()
         close(pipefd[0]);
         execl("/usr/bin/ls", "ls -l", "-l", NULL);
     }
+    return 0;
 }
 
 /*

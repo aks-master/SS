@@ -10,7 +10,7 @@ Date: 20/9/24
 #include <unistd.h>    // Import for `read`
 #include <stdio.h>     // Import for `perror` & `printf`
 
-void main()
+int main()
 {
     int fileDescriptor;           // File descriptor of the FIFO file
     char *fifoFile = "./pipe_20"; // Path name of the FIFO file
@@ -33,6 +33,7 @@ void main()
         }
         close(fileDescriptor);
     }
+    return 0;
 }
 /*
 aks@aks-Virtual-Machine:~/SS/Handson 2/question 20$ ./20R.out

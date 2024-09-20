@@ -15,7 +15,7 @@ Date: 20/9/24
 #include <unistd.h>
 #include <stdio.h>
 
-void main()
+int main()
 {
 
     int mkfifo_status, mknod_status; // 0 -> Success, -1 -> Error
@@ -35,6 +35,7 @@ void main()
         perror("Error while creating FIFO file!");
     else
         printf("Succesfully created FIFO file. Check using `ll` or `ls -l` command!\n");
+    return 0;
 }
 /*
 aks@aks-Virtual-Machine:~/SS/Handson 2/question 19$ gcc 19.c -o 19.out

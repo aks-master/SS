@@ -14,7 +14,7 @@ Date: 20/9/24
 
 #include "./common.h"
 
-void main()
+int main()
 {
     int fileDescriptor, writeBytes;
     char data[100];
@@ -34,6 +34,7 @@ void main()
         perror("Error while writing to FIFO!");
 
     close(fileDescriptor);
+    return 0;
 }
 /*output
 aks@aks-Virtual-Machine:~/SS/Handson 2/question 22$ ./22W.out

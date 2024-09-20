@@ -10,7 +10,7 @@ Date: 20/9/24
 #include <unistd.h>
 #include <stdio.h>
 
-void main()
+int main()
 {
     int fifoStatus;
     char data[] = "Sending data to pipe_20!";
@@ -32,6 +32,7 @@ void main()
             perror("Error while writing to the file!");
         close(fileDescriptor);
     }
+    return 0;
 }
 /*
 aks@aks-Virtual-Machine:~/SS/Handson 2/question 20$ ./20W.out

@@ -14,7 +14,7 @@ Date: 20/9/24
 
 #include "./common.h" // Import for FIFO file name
 
-void main()
+int main()
 {
     int fileDescriptor, readBytes;
     char data[100];
@@ -57,6 +57,7 @@ void main()
         printf("You didn't send any data for 10 seconds! :(\n");
 
     close(fileDescriptor);
+    return 0;
 }
 /*output
 aks@aks-Virtual-Machine:~/SS/Handson 2/question 22$ gcc 22R.c -o 22R.out

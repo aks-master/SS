@@ -12,7 +12,7 @@ Date: 20/9/24
 #include <stdlib.h>
 #include "./common.h" // Import for FIFO file name & `init` function
 
-void main()
+int main()
 {
     int readBytes, writeBytes;
     int fifo_A_writeFD, fifo_B_writeFD;
@@ -52,6 +52,7 @@ void main()
     printf("Data from FIFO: %s\n", data);
 
     close(fifo_A_writeFD);
+    return 0;
 }
 /*output
 aks@aks-Virtual-Machine:~/SS/Handson 2/question 21$ gcc 21B.c -o 21B.out
