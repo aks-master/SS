@@ -19,13 +19,13 @@ int main()
     if (pipe(pipefd1) == -1)
     {
         perror("pipe1");
-        exit(EXIT_FAILURE);
+        exit(0);
     }
 
     if (pipe(pipefd2) == -1)
     {
         perror("pipe2");
-        exit(EXIT_FAILURE);
+        exit(0);
     }
 
     if ((pid1 = fork()) == -1)
@@ -41,13 +41,13 @@ int main()
         close(pipefd1[1]);
         execlp("ls", "ls", "-l", NULL);
         perror("execlp ls");
-        exit(EXIT_FAILURE);
+        exit(0);
     }
 
     if ((pid2 = fork()) == -1)
     {
         perror("fork2");
-        exit(EXIT_FAILURE);
+        exit(0);
     }
 
     if (pid2 == 0)
@@ -59,13 +59,13 @@ int main()
         close(pipefd2[0]);
         execlp("grep", "grep", "^d", NULL);
         perror("execlp grep");
-        exit(EXIT_FAILURE);
+        exit(0);
     }
 
     if ((pid3 = fork()) == -1)
     {
         perror("fork3");
-        exit(EXIT_FAILURE);
+        exit(0);
     }
 
     if (pid3 == 0)
@@ -77,7 +77,7 @@ int main()
         close(pipefd2[1]);
         execlp("wc", "wc", "-l", NULL);
         perror("execlp wc");
-        exit(EXIT_FAILURE);
+        exit(0);
     }
 
     close(pipefd1[0]);

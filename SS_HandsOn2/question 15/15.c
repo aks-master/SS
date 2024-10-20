@@ -18,7 +18,7 @@ int main()
     if (pipe(pipefd) == -1)
     {
         perror("pipe");
-        exit(EXIT_FAILURE);
+        exit(0);
     }
 
     // Fork a child process
@@ -26,7 +26,7 @@ int main()
     if (pid == -1)
     {
         perror("fork");
-        exit(EXIT_FAILURE);
+        exit(0);
     }
 
     if (pid > 0)
