@@ -1,0 +1,15 @@
+BANKING MANAGEMENT SYSTEM
+PROJECT BY ABHISHEK KUMAR SINGH
+
+HOW TO RUN THE PROGRAM.
+1. compline and run initCounter.c present in Supporting Programs directory. This creates a file which keeps track of number of loan applications.
+2. compile and run server.c present in ServerAndClient directory. As we are using lcrypt library therefore compile using below command.
+gcc server.c -o server -L/lib/x86_64-linux-gnu/libcrypt.so -lcrypt
+3. compile and run client.c present in ServerAndClient directory in a new terminal.
+4. Now first you have to create an employee using admin account
+password of admin: aks123
+5.Now using employee you can create customer and perform desired operations.
+
+Refer to class Diagrams and DFDs for further explainations.
+
+
